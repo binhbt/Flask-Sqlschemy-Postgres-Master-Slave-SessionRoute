@@ -1,0 +1,206 @@
+ERROR   [2020-04-28 06:37:30,178] [user_controller.delete:55] : =================---------------------- get a user..
+ERROR   [2020-07-13 07:28:01,764] [app.log_exception:1892] : Exception on /api/v1/auth/register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "pg_master" (172.18.0.2) and accepting
+	TCP/IP connections on port 6432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/build/app/main/controller/auth_controller.py", line 49, in post
+    return save_new_user(data=post_data)
+  File "/build/app/main/service/user_service.py", line 17, in save_new_user
+    user = User.query.filter_by(email=data['email']).first()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3397, in first
+    ret = list(self[0:1])
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3171, in __getitem__
+    return list(res)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3503, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3525, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3540, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3518, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1141, in connection
+    execution_options=execution_options,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1147, in _connection_for_bind
+    engine, execution_options
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 433, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2305, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2343, in _wrap_pool_connect
+    e, dialect, self
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1585, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not connect to server: Connection refused
+	Is the server running on host "pg_master" (172.18.0.2) and accepting
+	TCP/IP connections on port 6432?
+
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+ERROR   [2020-07-13 07:45:10,706] [app.log_exception:1892] : Exception on /api/v1/auth/register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.ProgrammingError: relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/build/app/main/controller/auth_controller.py", line 49, in post
+    return save_new_user(data=post_data)
+  File "/build/app/main/service/user_service.py", line 17, in save_new_user
+    user = User.query.filter_by(email=data['email']).first()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3397, in first
+    ret = list(self[0:1])
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3171, in __getitem__
+    return list(res)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3503, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3528, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1014, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1133, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1318, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1512, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".email AS user_email, "user".registered_on AS user_registered_on, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".full_name AS user_full_name, "user".avatar AS user_avatar, "user".role AS user_role, "user".is_active AS user_is_active, "user".active_on AS user_active_on, "user".last_logged AS user_last_logged, "user".account_type AS user_account_type, "user".facebook_id AS user_facebook_id, "user".google_id AS user_google_id 
+FROM "user" 
+WHERE "user".email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'thanhbinh.gd6@gmail.com', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+ERROR   [2020-07-13 10:41:48,161] [user_controller.get:25] : =================---------------------- getting all user..
+ERROR   [2020-07-13 10:41:48,162] [app.log_exception:1892] : Exception on /api/v1/user/ [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/build/app/main/controller/user_controller.py", line 27, in get
+    return build_json_result(get_all_users())
+TypeError: get_all_users() missing 2 required positional arguments: 'limit' and 'offset'
+ERROR   [2020-07-13 10:42:38,642] [admin_controller.get:26] : =================---------------------- getting all user..
+ERROR   [2020-07-13 10:42:41,288] [admin_controller.get:26] : =================---------------------- getting all user..
+ERROR   [2020-07-13 10:44:27,122] [admin_controller.get:26] : =================---------------------- getting all user..
+ERROR   [2020-07-13 10:44:40,692] [admin_controller.get:26] : =================---------------------- getting all user..

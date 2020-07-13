@@ -1,0 +1,775 @@
+INFO    [2020-04-28 03:12:46,969] [auth_controller.get:147] : Host: auth:5000
+Connection: keep-alive
+X-Forwarded-For: 172.18.0.1
+X-Forwarded-Proto: http
+X-Forwarded-Host: 0.0.0.0
+X-Forwarded-Port: 8000
+X-Real-Ip: 172.18.0.1
+User-Agent: PostmanRuntime/7.24.1
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 01e54488-04dd-465a-8fe4-de3dfdbc3b51
+Accept-Encoding: gzip, deflate, br
+
+
+INFO    [2020-04-28 03:12:46,970] [auth_controller.get:148] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:12:46,972] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1545
+Host: auth
+
+
+INFO    [2020-04-28 03:12:46,973] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:12:46,974] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:12:46,974] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:12:46,975] [auth_controller.post:158] : {'latencies': {'request': 157, 'kong': 152, 'proxy': 4}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '235', 'uri': '/api/v1/auth/test', 'url': 'http://0.0.0.0:8000/api/v1/auth/test', 'headers': {'cache-control': 'no-cache', 'postman-token': '01e54488-04dd-465a-8fe4-de3dfdbc3b51', 'user-agent': 'PostmanRuntime/7.24.1', 'accept': '*/*', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'host': '0.0.0.0'}, 'method': 'GET'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588043566967, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/test', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:12:46 GMT', 'connection': 'close', 'content-length': '96', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '153', 'x-kong-upstream-latency': '4', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '402'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588043566814}
+INFO    [2020-04-28 03:14:12,265] [auth_controller.post:42] : {'email': 'thanhbinh.gd@gmail.com', 'username': 'abc', 'password': 'a123456$', 'role': 'provider', 'account_type': 'kidssy'}
+INFO    [2020-04-28 03:14:12,659] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1618
+Host: auth
+
+
+INFO    [2020-04-28 03:14:12,660] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:14:12,660] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:14:12,660] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:14:12,660] [auth_controller.post:158] : {'latencies': {'request': 445, 'kong': 0, 'proxy': 445}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '387', 'uri': '/api/v1/auth/register', 'url': 'http://auth.com:8000/api/v1/auth/register', 'headers': {'host': 'auth.com', 'content-type': 'application/json', 'postman-token': 'fd3e79c7-f52e-41f4-85cd-e49927bc3fe1', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '94', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588043652212, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/register', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:14:12 GMT', 'connection': 'close', 'content-length': '394', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '0', 'x-kong-upstream-latency': '445', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 201, 'size': '706'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588043652212}
+INFO    [2020-04-28 03:15:59,708] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1610
+Host: auth
+
+
+INFO    [2020-04-28 03:15:59,709] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:15:59,709] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:15:59,709] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:15:59,709] [auth_controller.post:158] : {'latencies': {'request': 361, 'kong': 0, 'proxy': 361}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '419', 'uri': '/api/v1/auth/login', 'url': 'http://auth.com:8000/api/v1/auth/login', 'headers': {'host': 'auth.com', 'content-type': 'application/json', 'postman-token': '7f157f9b-9ac1-4145-af04-1629fa254c65', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '128', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588043759343, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:15:59 GMT', 'connection': 'close', 'content-length': '122', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '0', 'x-kong-upstream-latency': '361', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 403, 'size': '436'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588043759343}
+INFO    [2020-04-28 03:25:47,661] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:25:47,699] [auth_helper.login_facebook_user:105] : None
+INFO    [2020-04-28 03:25:48,005] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1644
+Host: auth
+
+
+INFO    [2020-04-28 03:25:48,006] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:25:48,007] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:25:48,007] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:25:48,007] [auth_controller.post:158] : {'latencies': {'request': 830, 'kong': 134, 'proxy': 696}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '4e4b79bd-c23a-4b83-9378-b91ebd45395b', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 1, 'port': 5000, 'balancer_start': 1588044347307, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:25:48 GMT', 'connection': 'close', 'content-length': '458', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '134', 'x-kong-upstream-latency': '696', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 201, 'size': '772'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044347174}
+INFO    [2020-04-28 03:28:33,973] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:28:33,977] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:28:34,000] [auth_helper.login_facebook_user:147] : get_user_profile() missing 1 required positional argument: 'user_type'
+INFO    [2020-04-28 03:28:34,004] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1639
+Host: auth
+
+
+INFO    [2020-04-28 03:28:34,004] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:28:34,005] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:28:34,005] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:28:34,005] [auth_controller.post:158] : {'latencies': {'request': 311, 'kong': 0, 'proxy': 310}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': 'b99727e4-0e03-4d22-8bc5-387d5357b0c7', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044513692, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:28:34 GMT', 'connection': 'close', 'content-length': '94', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '310', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 500, 'size': '419'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044513691}
+INFO    [2020-04-28 03:29:15,332] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:29:15,370] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:29:15,376] [auth_helper.login_facebook_user:147] : get_user_profile() missing 1 required positional argument: 'user_type'
+INFO    [2020-04-28 03:29:15,380] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1639
+Host: auth
+
+
+INFO    [2020-04-28 03:29:15,381] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:15,382] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:15,382] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:29:15,382] [auth_controller.post:158] : {'latencies': {'request': 328, 'kong': 1, 'proxy': 327}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': 'f258840e-eeda-4c38-85a6-36d45a454359', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044555050, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:29:15 GMT', 'connection': 'close', 'content-length': '94', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '327', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 500, 'size': '419'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044555049}
+INFO    [2020-04-28 03:29:16,333] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:29:16,336] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:29:16,337] [auth_helper.login_facebook_user:147] : get_user_profile() missing 1 required positional argument: 'user_type'
+INFO    [2020-04-28 03:29:16,341] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1639
+Host: auth
+
+
+INFO    [2020-04-28 03:29:16,341] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:16,342] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:16,342] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:29:16,342] [auth_controller.post:158] : {'latencies': {'request': 274, 'kong': 2, 'proxy': 272}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '548f5510-dd7c-494e-b457-64a59b0a8319', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044556066, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:29:16 GMT', 'connection': 'close', 'content-length': '94', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '272', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 500, 'size': '419'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044556065}
+INFO    [2020-04-28 03:29:17,203] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:29:17,205] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:29:17,209] [auth_helper.login_facebook_user:147] : get_user_profile() missing 1 required positional argument: 'user_type'
+INFO    [2020-04-28 03:29:17,216] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1639
+Host: auth
+
+
+INFO    [2020-04-28 03:29:17,217] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:17,217] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:17,217] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:29:17,218] [auth_controller.post:158] : {'latencies': {'request': 325, 'kong': 2, 'proxy': 323}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '4bf1685f-4731-4b0f-9bc8-937b91884cad', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044556888, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:29:17 GMT', 'connection': 'close', 'content-length': '94', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '323', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 500, 'size': '419'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044556887}
+INFO    [2020-04-28 03:29:18,073] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:29:18,077] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:29:18,079] [auth_helper.login_facebook_user:147] : get_user_profile() missing 1 required positional argument: 'user_type'
+INFO    [2020-04-28 03:29:18,084] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1639
+Host: auth
+
+
+INFO    [2020-04-28 03:29:18,084] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:18,085] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:18,085] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:29:18,085] [auth_controller.post:158] : {'latencies': {'request': 287, 'kong': 1, 'proxy': 286}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '864049e1-66d3-4a94-aa79-dca601592f52', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044557794, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:29:18 GMT', 'connection': 'close', 'content-length': '94', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '0', 'x-kong-upstream-latency': '286', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 500, 'size': '419'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044557794}
+INFO    [2020-04-28 03:29:18,831] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:29:18,834] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:29:18,837] [auth_helper.login_facebook_user:147] : get_user_profile() missing 1 required positional argument: 'user_type'
+INFO    [2020-04-28 03:29:18,840] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1639
+Host: auth
+
+
+INFO    [2020-04-28 03:29:18,841] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:18,841] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:18,841] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:29:18,842] [auth_controller.post:158] : {'latencies': {'request': 292, 'kong': 1, 'proxy': 291}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '3280b906-1c1c-469f-8037-b319b2203ffd', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044558547, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:29:18 GMT', 'connection': 'close', 'content-length': '94', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '0', 'x-kong-upstream-latency': '291', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 500, 'size': '419'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044558547}
+INFO    [2020-04-28 03:29:24,970] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:29:24,974] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:29:24,978] [auth_helper.login_facebook_user:147] : get_user_profile() missing 1 required positional argument: 'user_type'
+INFO    [2020-04-28 03:29:24,984] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1639
+Host: auth
+
+
+INFO    [2020-04-28 03:29:24,984] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:24,985] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:29:24,985] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:29:24,985] [auth_controller.post:158] : {'latencies': {'request': 321, 'kong': 1, 'proxy': 320}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '5847615f-55d2-411a-a991-a0a822b532c6', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044564659, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:29:24 GMT', 'connection': 'close', 'content-length': '94', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '320', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 500, 'size': '419'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044564658}
+INFO    [2020-04-28 03:30:12,438] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:30:12,477] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:30:12,482] [auth_helper.login_facebook_user:122] : aaaaaaaa
+INFO    [2020-04-28 03:30:12,482] [auth_helper.login_facebook_user:148] : get_user_profile() missing 1 required positional argument: 'user_type'
+INFO    [2020-04-28 03:30:12,489] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1639
+Host: auth
+
+
+INFO    [2020-04-28 03:30:12,490] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:30:12,490] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:30:12,491] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:30:12,492] [auth_controller.post:158] : {'latencies': {'request': 389, 'kong': 0, 'proxy': 389}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '732c84e0-fd37-48a1-84a5-1a3ea5dfe44f', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044612095, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:30:12 GMT', 'connection': 'close', 'content-length': '94', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '0', 'x-kong-upstream-latency': '389', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 500, 'size': '419'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044612095}
+INFO    [2020-04-28 03:32:24,803] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:32:24,845] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:32:24,849] [auth_helper.login_facebook_user:122] : aaaaaaaa
+INFO    [2020-04-28 03:32:30,057] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1645
+Host: auth
+
+
+INFO    [2020-04-28 03:32:30,058] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:32:30,060] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:32:30,060] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:32:30,061] [auth_controller.post:158] : {'latencies': {'request': 3, 'kong': 2, 'proxy': 1}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '8f6927a0-9a43-4c99-963e-3d1ea356d20a', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044696035, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'text/plain; charset=UTF-8', 'date': 'Tue, 28 Apr 2020 03:31:36 GMT', 'connection': 'close', 'content-length': '1161', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '1', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 500, 'size': '1495'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044696034}
+INFO    [2020-04-28 03:32:31,065] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1640
+Host: auth
+
+
+INFO    [2020-04-28 03:32:31,066] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:32:31,067] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:32:31,067] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:32:31,068] [auth_controller.post:158] : {'latencies': {'request': 383, 'kong': 1, 'proxy': 382}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': 'ca1dcd96-76e7-4f55-888a-f0b02e0a2654', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044744526, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:32:24 GMT', 'connection': 'close', 'content-length': '487', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '382', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '794'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044744525}
+INFO    [2020-04-28 03:33:35,732] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2068
+Host: auth
+
+
+INFO    [2020-04-28 03:33:35,733] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:33:35,734] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:33:35,734] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:33:35,734] [auth_controller.post:158] : {'consumer': {'custom_id': 'user1_id', 'created_at': 1584413458, 'id': '966f70ca-c714-4003-8547-7486de08a2dc', 'username': 'user1'}, 'latencies': {'request': 129, 'kong': 129, 'proxy': -1}, 'service': {'host': 'provider-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '752ff9ee-8d42-4027-84d1-65025d18fc19', 'protocol': 'http', 'name': 'provider-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '558', 'uri': '/api/v1/provider/profiles/', 'url': 'http://provider.com:8000/api/v1/provider/profiles/', 'headers': {'host': 'provider.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODgxMzExNDksImlhdCI6MTU4ODA0NDc0NCwic3ViIjoyLCJpc3MiOiJuMXJIUm1hMHZkdVlTczF2dU56S2RWdWZia2xlTDdndSIsInJvbGUiOiJ1c2VyIiwiYXR5cGUiOiJmYWNlYm9vayJ9.2ifZLqoFToobdVrKWQE0Y6oJJSwpj-aKTl0-JdUkOtw', 'postman-token': '4b0494dd-da5f-479f-9aae-62fe4e688a37', 'accept': '*/*', 'x-consumer-username': 'user1', 'cache-control': 'no-cache', 'content-length': '325', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-custom-id': 'user1_id', 'x-consumer-id': '966f70ca-c714-4003-8547-7486de08a2dc', 'connection': 'keep-alive', 'content-type': 'text/plain'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': {}, 'authenticated_entity': {'id': 'bbaff21a-2bda-42b2-8d04-0d224132f04e'}, 'upstream_uri': '/api/v1/provider/profiles/', 'response': {'headers': {'content-type': 'application/json; charset=utf-8', 'x-kong-response-latency': '129', 'server': 'kong/1.4.0', 'connection': 'close', 'content-length': '45', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 403, 'size': '326'}, 'route': {'id': 'be743cd8-d5a8-413a-b1d1-420aa188f879', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '752ff9ee-8d42-4027-84d1-65025d18fc19'}, 'name': 'provider-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/provider'], 'https_redirect_status_code': 426}, 'started_at': 1588044815602}
+INFO    [2020-04-28 03:34:10,063] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2332
+Host: auth
+
+
+INFO    [2020-04-28 03:34:10,063] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:34:10,063] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:34:10,065] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:34:10,065] [auth_controller.post:158] : {'consumer': {'custom_id': 'user1_id', 'created_at': 1584413458, 'id': '966f70ca-c714-4003-8547-7486de08a2dc', 'username': 'user1'}, 'latencies': {'request': 366, 'kong': 299, 'proxy': 66}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '851', 'uri': '/api/v1/kuser/profiles/', 'url': 'http://user.com:8000/api/v1/kuser/profiles/', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODgxMzExNDksImlhdCI6MTU4ODA0NDc0NCwic3ViIjoyLCJpc3MiOiJuMXJIUm1hMHZkdVlTczF2dU56S2RWdWZia2xlTDdndSIsInJvbGUiOiJ1c2VyIiwiYXR5cGUiOiJmYWNlYm9vayJ9.2ifZLqoFToobdVrKWQE0Y6oJJSwpj-aKTl0-JdUkOtw', 'connection': 'keep-alive', 'cache-control': 'no-cache', 'x-atype': 'facebook', 'x-role': 'user', 'postman-token': 'f18d48b1-ac33-4f5d-8339-26b972cbaf5b', 'accept': '*/*', 'x-exp': '1588131149', 'x-iat': '1588044744', 'x-iss': 'n1rHRma0vduYSs1vuNzKdVufbkleL7gu', 'content-type': 'text/plain', 'content-length': '300', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'user1', 'x-consumer-custom-id': 'user1_id', 'x-consumer-id': '966f70ca-c714-4003-8547-7486de08a2dc', 'x-sub': '2'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044849995, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'bbaff21a-2bda-42b2-8d04-0d224132f04e'}, 'upstream_uri': '/api/v1/kuser/profiles/', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:34:10 GMT', 'connection': 'close', 'content-length': '127', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '299', 'x-kong-upstream-latency': '66', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 201, 'size': '440'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588044849696}
+INFO    [2020-04-28 03:34:20,342] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:34:20,384] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:34:20,388] [auth_helper.login_facebook_user:122] : aaaaaaaa
+INFO    [2020-04-28 03:34:20,396] [auth_helper.login_facebook_user:148] : name 'LOG' is not defined
+INFO    [2020-04-28 03:34:20,401] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1639
+Host: auth
+
+
+INFO    [2020-04-28 03:34:20,401] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:34:20,402] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:34:20,402] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:34:20,402] [auth_controller.post:158] : {'latencies': {'request': 378, 'kong': 0, 'proxy': 378}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '720f3223-65ee-4d36-b427-aeae2d9ee5fc', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044860020, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:34:20 GMT', 'connection': 'close', 'content-length': '94', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '0', 'x-kong-upstream-latency': '378', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 500, 'size': '419'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044860020}
+INFO    [2020-04-28 03:35:11,864] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:35:11,908] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:35:11,911] [auth_helper.login_facebook_user:122] : aaaaaaaa
+INFO    [2020-04-28 03:35:11,967] [user_util.get_user_profile:16] : argument of type 'method' is not iterable
+INFO    [2020-04-28 03:35:11,975] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1640
+Host: auth
+
+
+INFO    [2020-04-28 03:35:11,976] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:35:11,977] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:35:11,978] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:35:11,978] [auth_controller.post:158] : {'latencies': {'request': 433, 'kong': 0, 'proxy': 433}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '173b5942-6dd6-4d7b-ab89-dd5c9b2f05a2', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588044911540, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:35:11 GMT', 'connection': 'close', 'content-length': '487', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '0', 'x-kong-upstream-latency': '433', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '794'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588044911540}
+INFO    [2020-04-28 03:37:06,187] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:37:06,226] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:37:06,229] [auth_helper.login_facebook_user:122] : aaaaaaaa
+INFO    [2020-04-28 03:37:06,237] [user_util.get_user_profile:16] : argument of type 'method' is not iterable
+INFO    [2020-04-28 03:37:06,242] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1640
+Host: auth
+
+
+INFO    [2020-04-28 03:37:06,243] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:37:06,244] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:37:06,245] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:37:06,245] [auth_controller.post:158] : {'latencies': {'request': 332, 'kong': 1, 'proxy': 331}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '8166942a-4ddd-4697-9d0e-89e75dcf2592', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588045025910, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:37:06 GMT', 'connection': 'close', 'content-length': '487', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '331', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '794'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588045025909}
+INFO    [2020-04-28 03:37:07,289] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:37:07,293] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:37:07,296] [auth_helper.login_facebook_user:122] : aaaaaaaa
+INFO    [2020-04-28 03:37:07,342] [user_util.get_user_profile:16] : argument of type 'method' is not iterable
+INFO    [2020-04-28 03:37:07,349] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1640
+Host: auth
+
+
+INFO    [2020-04-28 03:37:07,349] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:37:07,351] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:37:07,351] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:37:07,352] [auth_controller.post:158] : {'latencies': {'request': 337, 'kong': 1, 'proxy': 336}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '12e76171-1154-4c16-8832-715716237d78', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588045027009, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:37:07 GMT', 'connection': 'close', 'content-length': '487', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '336', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '794'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588045027008}
+INFO    [2020-04-28 03:37:08,535] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:37:08,539] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:37:08,542] [auth_helper.login_facebook_user:122] : aaaaaaaa
+INFO    [2020-04-28 03:37:08,549] [user_util.get_user_profile:16] : argument of type 'method' is not iterable
+INFO    [2020-04-28 03:37:08,552] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1640
+Host: auth
+
+
+INFO    [2020-04-28 03:37:08,553] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:37:08,554] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:37:08,554] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:37:08,558] [auth_controller.post:158] : {'latencies': {'request': 304, 'kong': 0, 'proxy': 304}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '5222268c-e55d-4848-9037-40aebfe57921', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588045028246, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:37:08 GMT', 'connection': 'close', 'content-length': '487', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '0', 'x-kong-upstream-latency': '304', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '794'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588045028246}
+INFO    [2020-04-28 03:37:30,202] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:37:30,238] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:37:30,241] [auth_helper.login_facebook_user:122] : aaaaaaaa
+INFO    [2020-04-28 03:37:30,249] [user_util.get_user_profile:17] : argument of type 'method' is not iterable
+INFO    [2020-04-28 03:37:30,254] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1640
+Host: auth
+
+
+INFO    [2020-04-28 03:37:30,254] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:37:30,255] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:37:30,255] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:37:30,255] [auth_controller.post:158] : {'latencies': {'request': 360, 'kong': 2, 'proxy': 358}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '2d37501c-fa2d-4f26-914d-6a02bd9991e5', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588045049893, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:37:30 GMT', 'connection': 'close', 'content-length': '487', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '358', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '794'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588045049892}
+INFO    [2020-04-28 03:44:15,228] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:44:15,270] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:44:15,283] [user_util.get_user_profile:17] : argument of type 'method' is not iterable
+INFO    [2020-04-28 03:44:15,289] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1642
+Host: auth
+
+
+INFO    [2020-04-28 03:44:15,290] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:44:15,292] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:44:15,293] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:44:15,294] [auth_controller.post:158] : {'latencies': {'request': 412, 'kong': 67, 'proxy': 345}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '8387fa39-9198-4ac2-ac93-f597130b157a', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588045454940, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:44:15 GMT', 'connection': 'close', 'content-length': '487', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '67', 'x-kong-upstream-latency': '345', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '795'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588045454873}
+INFO    [2020-04-28 03:46:32,797] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:46:32,838] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:46:32,848] [user_util.get_user_profile:11] : <Response [200]>
+INFO    [2020-04-28 03:46:32,848] [user_util.get_user_profile:18] : argument of type 'method' is not iterable
+INFO    [2020-04-28 03:46:32,853] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1640
+Host: auth
+
+
+INFO    [2020-04-28 03:46:32,854] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:46:32,855] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:46:32,855] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:46:32,855] [auth_controller.post:158] : {'latencies': {'request': 372, 'kong': 2, 'proxy': 370}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '3b04a9d6-039a-4401-bef5-af58df184ecb', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588045592479, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:46:32 GMT', 'connection': 'close', 'content-length': '487', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '370', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '794'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588045592478}
+INFO    [2020-04-28 03:47:20,444] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:47:20,486] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:47:20,495] [user_util.get_user_profile:11] : <Response [200]>
+INFO    [2020-04-28 03:47:20,503] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1642
+Host: auth
+
+
+INFO    [2020-04-28 03:47:20,506] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:47:20,507] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:47:20,507] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:47:20,511] [auth_controller.post:158] : {'latencies': {'request': 369, 'kong': 1, 'proxy': 367}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '7d133450-1cb3-4906-8cf2-2fbb61edc241', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588045640131, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:47:20 GMT', 'connection': 'close', 'content-length': '1258', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '367', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '1566'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588045640130}
+INFO    [2020-04-28 03:47:45,811] [auth_helper.login_facebook_user:94] : {'id': '10206415194935459', 'name': 'Leo Bui'}
+INFO    [2020-04-28 03:47:45,851] [auth_helper.login_facebook_user:105] : <User '10206415194935459@facebook.com'>
+INFO    [2020-04-28 03:47:45,863] [user_util.get_user_profile:11] : <Response [200]>
+INFO    [2020-04-28 03:47:45,869] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 1642
+Host: auth
+
+
+INFO    [2020-04-28 03:47:45,869] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:47:45,870] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 03:47:45,870] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 03:47:45,872] [auth_controller.post:158] : {'latencies': {'request': 367, 'kong': 1, 'proxy': 365}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '623', 'uri': '/api/v1/auth/login_by_facebook', 'url': 'http://auth.com:8000/api/v1/auth/login_by_facebook', 'headers': {'host': 'auth.com', 'content-type': 'text/plain', 'postman-token': '21e6b5e9-e268-4400-9a2e-5582c3f50732', 'accept': '*/*', 'cache-control': 'no-cache', 'content-length': '326', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'connection': 'keep-alive'}, 'method': 'POST'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588045665501, 'ip': '172.18.0.18'}], 'upstream_uri': '/api/v1/auth/login_by_facebook', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 03:47:45 GMT', 'connection': 'close', 'content-length': '1064', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '365', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '1372'}, 'route': {'id': '1d80771b-64aa-4c48-a49a-1c803755272a', 'updated_at': 1584413459, 'protocols': ['http', 'https'], 'created_at': 1584413459, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-auth-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/auth'], 'https_redirect_status_code': 426}, 'started_at': 1588045665500}
+INFO    [2020-04-28 04:00:39,869] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2251
+Host: auth
+
+
+INFO    [2020-04-28 04:00:39,870] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:00:39,870] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:00:39,870] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 04:00:39,870] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'username': 'admin1'}, 'latencies': {'request': 6144, 'kong': 6052, 'proxy': 2}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '482', 'uri': '/api/v1/kuser/account/1', 'url': 'http://user.com:8000/api/v1/kuser/account/1', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': 'e5c790cb-a30a-41ff-94d1-0618d6d261c3', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'DELETE'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588046439862, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/account/1', 'response': {'headers': {'content-type': 'text/html; charset=UTF-8', 'date': 'Tue, 28 Apr 2020 04:00:39 GMT', 'connection': 'close', 'content-length': '232', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '6141', 'x-kong-upstream-latency': '2', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 404, 'size': '555'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588046433721}
+INFO    [2020-04-28 04:01:05,386] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2234
+Host: auth
+
+
+INFO    [2020-04-28 04:01:05,386] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:01:05,386] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:01:05,386] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 04:01:05,387] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'username': 'admin1'}, 'latencies': {'request': 7, 'kong': 2, 'proxy': 5}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '480', 'uri': '/api/v1/kuser/profiles/1', 'url': 'http://user.com:8000/api/v1/kuser/profiles/1', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': 'f738f970-4fa6-455f-b936-090803d8c0b9', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'GET'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588046465374, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/profiles/1', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 04:01:05 GMT', 'connection': 'close', 'content-length': '230', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '5', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 404, 'size': '542'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588046465373}
+INFO    [2020-04-28 04:43:08,589] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2245
+Host: auth
+
+
+INFO    [2020-04-28 04:43:08,590] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:43:08,598] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:43:08,599] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 04:43:08,599] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'username': 'admin1', 'id': '511eb7f4-3e45-494a-8162-cf60046270e8'}, 'latencies': {'request': 2176, 'kong': 2137, 'proxy': 39}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '480', 'uri': '/api/v1/kuser/profiles/1', 'url': 'http://user.com:8000/api/v1/kuser/profiles/1', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': '14e3f3fc-44d9-4230-90e6-24fc5b1b9e10', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'GET'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588048988548, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/profiles/1', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 04:43:08 GMT', 'connection': 'close', 'content-length': '230', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '2137', 'x-kong-upstream-latency': '39', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 404, 'size': '546'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588048986411}
+INFO    [2020-04-28 04:43:15,769] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2234
+Host: auth
+
+
+INFO    [2020-04-28 04:43:15,769] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:43:15,770] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:43:15,770] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 04:43:15,770] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'username': 'admin1', 'id': '511eb7f4-3e45-494a-8162-cf60046270e8'}, 'latencies': {'request': 5, 'kong': 0, 'proxy': 5}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '480', 'uri': '/api/v1/kuser/profiles/2', 'url': 'http://user.com:8000/api/v1/kuser/profiles/2', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': '85b3be3e-4fee-49c4-ac9c-08e0157abdc3', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'GET'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588048995762, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/profiles/2', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 04:43:15 GMT', 'connection': 'close', 'content-length': '600', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '0', 'x-kong-upstream-latency': '5', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '905'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588048995762}
+INFO    [2020-04-28 04:56:18,477] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2245
+Host: auth
+
+
+INFO    [2020-04-28 04:56:18,477] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:56:18,478] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:56:18,478] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 04:56:18,478] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'username': 'admin1', 'id': '511eb7f4-3e45-494a-8162-cf60046270e8'}, 'latencies': {'request': 23, 'kong': 2, 'proxy': 21}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '482', 'uri': '/api/v1/kuser/account/1', 'url': 'http://user.com:8000/api/v1/kuser/account/1', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': 'b26144c6-be6b-44d9-abbd-17f24097fb63', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'DELETE'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588049778451, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/account/1', 'response': {'headers': {'content-type': 'text/html; charset=UTF-8', 'date': 'Tue, 28 Apr 2020 04:56:18 GMT', 'connection': 'close', 'content-length': '232', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '2', 'x-kong-upstream-latency': '21', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 404, 'size': '553'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588049778449}
+INFO    [2020-04-28 04:56:23,072] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2242
+Host: auth
+
+
+INFO    [2020-04-28 04:56:23,072] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:56:23,072] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:56:23,072] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 04:56:23,073] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'username': 'admin1', 'id': '511eb7f4-3e45-494a-8162-cf60046270e8'}, 'latencies': {'request': 5, 'kong': 1, 'proxy': 4}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '482', 'uri': '/api/v1/kuser/account/2', 'url': 'http://user.com:8000/api/v1/kuser/account/2', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': '1eefaf47-ab2a-4002-94cb-da9c8a85901c', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'DELETE'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588049783064, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/account/2', 'response': {'headers': {'content-type': 'text/html; charset=UTF-8', 'date': 'Tue, 28 Apr 2020 04:56:23 GMT', 'connection': 'close', 'content-length': '232', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '4', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 404, 'size': '552'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588049783063}
+INFO    [2020-04-28 04:56:24,045] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2242
+Host: auth
+
+
+INFO    [2020-04-28 04:56:24,047] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:56:24,048] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 04:56:24,048] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 04:56:24,048] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'username': 'admin1', 'id': '511eb7f4-3e45-494a-8162-cf60046270e8'}, 'latencies': {'request': 3, 'kong': 1, 'proxy': 2}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '482', 'uri': '/api/v1/kuser/account/2', 'url': 'http://user.com:8000/api/v1/kuser/account/2', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': 'c4e490b6-69ce-4689-a01a-5c65b9814dad', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'DELETE'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588049784038, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/account/2', 'response': {'headers': {'content-type': 'text/html; charset=UTF-8', 'date': 'Tue, 28 Apr 2020 04:56:24 GMT', 'connection': 'close', 'content-length': '232', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '2', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 404, 'size': '552'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588049784037}
+INFO    [2020-04-28 06:34:52,367] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2250
+Host: auth
+
+
+INFO    [2020-04-28 06:34:52,391] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 06:34:52,392] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 06:34:52,392] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 06:34:52,408] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'username': 'admin1', 'id': '511eb7f4-3e45-494a-8162-cf60046270e8'}, 'latencies': {'request': 257, 'kong': 69, 'proxy': 172}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '482', 'uri': '/api/v1/kuser/account/2', 'url': 'http://user.com:8000/api/v1/kuser/account/2', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': 'cb64b981-561b-4698-a604-977508aefb6d', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'DELETE'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588055692111, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/account/2', 'response': {'headers': {'content-type': 'text/html; charset=UTF-8', 'date': 'Tue, 28 Apr 2020 06:34:52 GMT', 'connection': 'close', 'content-length': '232', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '84', 'x-kong-upstream-latency': '172', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 404, 'size': '555'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588055692027}
+INFO    [2020-04-28 06:34:53,348] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2242
+Host: auth
+
+
+INFO    [2020-04-28 06:34:53,349] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 06:34:53,349] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 06:34:53,349] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 06:34:53,349] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'username': 'admin1', 'id': '511eb7f4-3e45-494a-8162-cf60046270e8'}, 'latencies': {'request': 3, 'kong': 1, 'proxy': 2}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '482', 'uri': '/api/v1/kuser/account/2', 'url': 'http://user.com:8000/api/v1/kuser/account/2', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': '3ff1ffa3-dd4f-4864-8448-740fe502d98e', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'DELETE'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588055693345, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/account/2', 'response': {'headers': {'content-type': 'text/html; charset=UTF-8', 'date': 'Tue, 28 Apr 2020 06:34:53 GMT', 'connection': 'close', 'content-length': '232', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '2', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 404, 'size': '552'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588055693344}
+INFO    [2020-04-28 06:34:54,533] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2242
+Host: auth
+
+
+INFO    [2020-04-28 06:34:54,533] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 06:34:54,533] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 06:34:54,533] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 06:34:54,534] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'username': 'admin1', 'id': '511eb7f4-3e45-494a-8162-cf60046270e8'}, 'latencies': {'request': 4, 'kong': 1, 'proxy': 2}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '482', 'uri': '/api/v1/kuser/account/2', 'url': 'http://user.com:8000/api/v1/kuser/account/2', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': '800b24fb-53b4-4df8-820e-09ae908c700b', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'DELETE'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588055694528, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/account/2', 'response': {'headers': {'content-type': 'text/html; charset=UTF-8', 'date': 'Tue, 28 Apr 2020 06:34:54 GMT', 'connection': 'close', 'content-length': '232', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '2', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 404, 'size': '552'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588055694527}
+ERROR   [2020-04-28 06:37:30,178] [user_controller.delete:55] : =================---------------------- get a user..
+INFO    [2020-04-28 06:37:30,179] [user_controller.delete:56] : Host: auth:5000
+Connection: keep-alive
+X-Forwarded-For: 172.18.0.17
+X-Forwarded-Proto: http
+X-Forwarded-Host: auth.com
+X-Forwarded-Port: 8000
+X-Real-Ip: 172.18.0.17
+Content-Length: 0
+User-Agent: python-requests/2.23.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA
+X-Consumer-Id: 511eb7f4-3e45-494a-8162-cf60046270e8
+X-Consumer-Custom-Id: admin1_id
+X-Consumer-Username: admin1
+X-Sub: 5
+X-Iss: STjSejeZ3GIvewdIHxfSphi4V2u0XZzw
+X-Role: admin
+X-Iat: 1577676716
+X-Exp: 1577763121
+
+
+INFO    [2020-04-28 06:37:30,496] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2149
+Host: auth
+
+
+INFO    [2020-04-28 06:37:30,497] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 06:37:30,497] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 06:37:30,497] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 06:37:30,498] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'username': 'admin1', 'id': '511eb7f4-3e45-494a-8162-cf60046270e8'}, 'latencies': {'request': 370, 'kong': 53, 'proxy': 317}, 'service': {'host': 'auth', 'created_at': 1584413458, 'connect_timeout': 60000, 'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b', 'protocol': 'http', 'name': 'auth-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413458, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '411', 'uri': '/api/v1/user/1', 'url': 'http://auth.com:8000/api/v1/user/1', 'headers': {'host': 'auth.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'connection': 'keep-alive', 'content-length': '0', 'accept-encoding': 'gzip, deflate', 'user-agent': 'python-requests/2.23.0', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'DELETE'}, 'client_ip': '172.18.0.17', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588055850177, 'ip': '172.18.0.18'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/user/1', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 06:37:30 GMT', 'connection': 'close', 'content-length': '100', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '52', 'x-kong-upstream-latency': '317', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '408'}, 'route': {'id': '6b3252b2-3510-4793-ab10-ab9191b331b4', 'updated_at': 1584413460, 'protocols': ['http', 'https'], 'created_at': 1584413460, 'service': {'id': 'f9d93252-2048-498f-b3d6-4f6ff22c628b'}, 'name': 'auth-api-user-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/user'], 'https_redirect_status_code': 426}, 'started_at': 1588055850125}
+INFO    [2020-04-28 06:37:30,500] [auth_controller.post:153] : Content-Type: application/json
+User-Agent: lua-resty-http/0.14 (Lua) ngx_lua/10015
+Content-Length: 2270
+Host: auth
+
+
+INFO    [2020-04-28 06:37:30,500] [auth_controller.post:154] : ImmutableMultiDict([])
+INFO    [2020-04-28 06:37:30,500] [auth_controller.post:155] : ImmutableMultiDict([])
+INFO    [2020-04-28 06:37:30,501] [auth_controller.post:156] : CombinedMultiDict([ImmutableMultiDict([]), ImmutableMultiDict([])])
+INFO    [2020-04-28 06:37:30,501] [auth_controller.post:158] : {'consumer': {'custom_id': 'admin1_id', 'created_at': 1584413458, 'username': 'admin1', 'id': '511eb7f4-3e45-494a-8162-cf60046270e8'}, 'latencies': {'request': 654, 'kong': 1, 'proxy': 653}, 'service': {'host': 'user-api', 'created_at': 1584413461, 'connect_timeout': 60000, 'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a', 'protocol': 'http', 'name': 'user-service', 'read_timeout': 60000, 'port': 5000, 'updated_at': 1584413461, 'retries': 5, 'write_timeout': 60000}, 'request': {'querystring': {}, 'size': '491', 'uri': '/api/v1/kuser/profiles/account/1', 'url': 'http://user.com:8000/api/v1/kuser/profiles/account/1', 'headers': {'host': 'user.com', 'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Nzc3NjMxMjEsImlhdCI6MTU3NzY3NjcxNiwic3ViIjo1LCJpc3MiOiJTVGpTZWplWjNHSXZld2RJSHhmU3BoaTRWMnUwWFp6dyIsInJvbGUiOiJhZG1pbiJ9.L9iptf3oLNLAPjGFVeH9SLQsCzmt_YLtJA1qRF3kcsA', 'postman-token': '40ca0a60-bd3d-4047-9188-82f6a71bce06', 'x-exp': '1577763121', 'accept': '*/*', 'x-iat': '1577676716', 'x-consumer-id': '511eb7f4-3e45-494a-8162-cf60046270e8', 'x-iss': 'STjSejeZ3GIvewdIHxfSphi4V2u0XZzw', 'cache-control': 'no-cache', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate, br', 'user-agent': 'PostmanRuntime/7.24.1', 'x-consumer-username': 'admin1', 'x-consumer-custom-id': 'admin1_id', 'x-role': 'admin', 'x-sub': '5'}, 'method': 'DELETE'}, 'client_ip': '172.18.0.1', 'tries': [{'balancer_latency': 0, 'port': 5000, 'balancer_start': 1588055849844, 'ip': '172.18.0.17'}], 'authenticated_entity': {'id': 'c2a82e98-3edf-4c9c-8e08-1aede1f0c95d'}, 'upstream_uri': '/api/v1/kuser/profiles/account/1', 'response': {'headers': {'content-type': 'application/json', 'date': 'Tue, 28 Apr 2020 06:37:30 GMT', 'connection': 'close', 'content-length': '100', 'via': 'kong/1.4.0', 'server': 'gunicorn/19.7.1', 'x-kong-proxy-latency': '1', 'x-kong-upstream-latency': '653', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Auth-Token'}, 'status': 200, 'size': '407'}, 'route': {'id': 'b6d54157-a0c5-4cf2-8428-57f4a680455c', 'updated_at': 1584413461, 'protocols': ['http', 'https'], 'created_at': 1584413461, 'service': {'id': '20c3aea6-5012-4028-bb1c-e99fba78aa5a'}, 'name': 'user-api-route', 'preserve_host': False, 'regex_priority': 0, 'strip_path': False, 'paths': ['/api/v1/kuser'], 'https_redirect_status_code': 426}, 'started_at': 1588055849843}
+DEBUG   [2020-07-13 07:27:49,747] [auth_controller.get:111] : test log User-Agent: PostmanRuntime/7.26.1
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 1b9ae8f4-4026-4d2d-b6a2-70e0c0a34cd4
+Host: 0.0.0.0:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+DEBUG   [2020-07-13 07:27:49,748] [auth_controller.get:112] : ImmutableMultiDict([])
+INFO    [2020-07-13 07:27:49,748] [auth_controller.get:114] : 11111111111111111111
+INFO    [2020-07-13 07:27:49,749] [auth_controller.get:115] : 222222222222222222222
+INFO    [2020-07-13 07:27:49,749] [auth_controller.get:116] : 33333333333333333
+INFO    [2020-07-13 07:27:49,749] [auth_controller.get:117] : 4444444444444444444444 
+
+INFO    [2020-07-13 07:27:49,749] [auth_controller.get:118] : 55555555555555555555555555 
+
+DEBUG   [2020-07-13 07:27:50,731] [auth_controller.get:111] : test log User-Agent: PostmanRuntime/7.26.1
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: e145d6d9-1a21-4de0-8ebf-47b87bcbb3e1
+Host: 0.0.0.0:5000
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+DEBUG   [2020-07-13 07:27:50,732] [auth_controller.get:112] : ImmutableMultiDict([])
+INFO    [2020-07-13 07:27:50,732] [auth_controller.get:114] : 11111111111111111111
+INFO    [2020-07-13 07:27:50,732] [auth_controller.get:115] : 222222222222222222222
+INFO    [2020-07-13 07:27:50,732] [auth_controller.get:116] : 33333333333333333
+INFO    [2020-07-13 07:27:50,732] [auth_controller.get:117] : 4444444444444444444444 
+
+INFO    [2020-07-13 07:27:50,733] [auth_controller.get:118] : 55555555555555555555555555 
+
+INFO    [2020-07-13 07:28:01,640] [auth_controller.post:44] : {'email': 'thanhbinh.gd6@gmail.com', 'username': 'abc', 'password': 'a123456', 'role': 'user', 'account_type': 'kidssy'}
+ERROR   [2020-07-13 07:28:01,764] [app.log_exception:1892] : Exception on /api/v1/auth/register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "pg_master" (172.18.0.2) and accepting
+	TCP/IP connections on port 6432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/build/app/main/controller/auth_controller.py", line 49, in post
+    return save_new_user(data=post_data)
+  File "/build/app/main/service/user_service.py", line 17, in save_new_user
+    user = User.query.filter_by(email=data['email']).first()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3397, in first
+    ret = list(self[0:1])
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3171, in __getitem__
+    return list(res)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3503, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3525, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3540, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3518, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1141, in connection
+    execution_options=execution_options,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1147, in _connection_for_bind
+    engine, execution_options
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 433, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2305, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2343, in _wrap_pool_connect
+    e, dialect, self
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1585, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not connect to server: Connection refused
+	Is the server running on host "pg_master" (172.18.0.2) and accepting
+	TCP/IP connections on port 6432?
+
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+INFO    [2020-07-13 07:45:10,651] [auth_controller.post:44] : {'email': 'thanhbinh.gd6@gmail.com', 'username': 'abc', 'password': 'a123456', 'role': 'user', 'account_type': 'kidssy'}
+ERROR   [2020-07-13 07:45:10,706] [app.log_exception:1892] : Exception on /api/v1/auth/register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.ProgrammingError: relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/build/app/main/controller/auth_controller.py", line 49, in post
+    return save_new_user(data=post_data)
+  File "/build/app/main/service/user_service.py", line 17, in save_new_user
+    user = User.query.filter_by(email=data['email']).first()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3397, in first
+    ret = list(self[0:1])
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3171, in __getitem__
+    return list(res)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3503, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3528, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1014, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1133, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1318, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1512, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+[SQL: SELECT "user".id AS user_id, "user".email AS user_email, "user".registered_on AS user_registered_on, "user".username AS user_username, "user".password_hash AS user_password_hash, "user".full_name AS user_full_name, "user".avatar AS user_avatar, "user".role AS user_role, "user".is_active AS user_is_active, "user".active_on AS user_active_on, "user".last_logged AS user_last_logged, "user".account_type AS user_account_type, "user".facebook_id AS user_facebook_id, "user".google_id AS user_google_id 
+FROM "user" 
+WHERE "user".email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'thanhbinh.gd6@gmail.com', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+INFO    [2020-07-13 07:47:09,808] [auth_controller.post:44] : {'email': 'thanhbinh.gd6@gmail.com', 'username': 'abc', 'password': 'a123456', 'role': 'user', 'account_type': 'kidssy'}
+INFO    [2020-07-13 10:41:35,097] [auth_controller.post:44] : {'email': 'thanhbinh.gd6@gmail.com', 'username': 'abc', 'password': 'a123456', 'role': 'user', 'account_type': 'kidssy'}
+INFO    [2020-07-13 10:41:39,207] [auth_controller.post:44] : {'email': 'thanhbinh.gd6@gmail.com', 'username': 'abc', 'password': 'a123456', 'role': 'user', 'account_type': 'kidssy'}
+ERROR   [2020-07-13 10:41:48,161] [user_controller.get:25] : =================---------------------- getting all user..
+WARNING [2020-07-13 10:41:48,162] [user_controller.get:26] : =================---------------------- getting all user..
+ERROR   [2020-07-13 10:41:48,162] [app.log_exception:1892] : Exception on /api/v1/user/ [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/build/app/main/controller/user_controller.py", line 27, in get
+    return build_json_result(get_all_users())
+TypeError: get_all_users() missing 2 required positional arguments: 'limit' and 'offset'
+ERROR   [2020-07-13 10:42:38,642] [admin_controller.get:26] : =================---------------------- getting all user..
+WARNING [2020-07-13 10:42:38,642] [admin_controller.get:27] : =================---------------------- getting all user..
+INFO    [2020-07-13 10:42:38,642] [admin_controller.get:28] : Host: auth.com
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ2OTM1MDAsImlhdCI6MTU5NDI2MDkwMCwic3ViIjoxMzcsImlzcyI6IlNUalNlamVaM0dJdmV3ZElIeGZTcGhpNFYydTBYWnp3Iiwicm9sZSI6ImFkbWluIiwiYXR5cGUiOiJraWRzc3kifQ.Y5QpOW556wSCNatADUchausbZQ0wr012Ng2-k09GsbU
+User-Agent: PostmanRuntime/7.26.1
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 2e453932-bbb1-477b-83f9-d26cd6fde3e1
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+ERROR   [2020-07-13 10:42:41,288] [admin_controller.get:26] : =================---------------------- getting all user..
+WARNING [2020-07-13 10:42:41,289] [admin_controller.get:27] : =================---------------------- getting all user..
+INFO    [2020-07-13 10:42:41,289] [admin_controller.get:28] : Host: auth.com
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ2OTM1MDAsImlhdCI6MTU5NDI2MDkwMCwic3ViIjoxMzcsImlzcyI6IlNUalNlamVaM0dJdmV3ZElIeGZTcGhpNFYydTBYWnp3Iiwicm9sZSI6ImFkbWluIiwiYXR5cGUiOiJraWRzc3kifQ.Y5QpOW556wSCNatADUchausbZQ0wr012Ng2-k09GsbU
+User-Agent: PostmanRuntime/7.26.1
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 62cceb05-b63d-4ce6-8d15-fa654e6ca7b4
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+ERROR   [2020-07-13 10:44:27,122] [admin_controller.get:26] : =================---------------------- getting all user..
+WARNING [2020-07-13 10:44:27,123] [admin_controller.get:27] : =================---------------------- getting all user..
+INFO    [2020-07-13 10:44:27,123] [admin_controller.get:28] : Host: auth.com
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ2OTM1MDAsImlhdCI6MTU5NDI2MDkwMCwic3ViIjoxMzcsImlzcyI6IlNUalNlamVaM0dJdmV3ZElIeGZTcGhpNFYydTBYWnp3Iiwicm9sZSI6ImFkbWluIiwiYXR5cGUiOiJraWRzc3kifQ.Y5QpOW556wSCNatADUchausbZQ0wr012Ng2-k09GsbU
+User-Agent: PostmanRuntime/7.26.1
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: a35b4c2e-9abd-4352-a0cd-82ded0f0c7d2
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+
+ERROR   [2020-07-13 10:44:40,692] [admin_controller.get:26] : =================---------------------- getting all user..
+WARNING [2020-07-13 10:44:40,693] [admin_controller.get:27] : =================---------------------- getting all user..
+INFO    [2020-07-13 10:44:40,693] [admin_controller.get:28] : Host: auth.com
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQ2OTM1MDAsImlhdCI6MTU5NDI2MDkwMCwic3ViIjoxMzcsImlzcyI6IlNUalNlamVaM0dJdmV3ZElIeGZTcGhpNFYydTBYWnp3Iiwicm9sZSI6ImFkbWluIiwiYXR5cGUiOiJraWRzc3kifQ.Y5QpOW556wSCNatADUchausbZQ0wr012Ng2-k09GsbU
+User-Agent: PostmanRuntime/7.26.1
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 4188230e-ceca-4b62-a93d-c463925b3f05
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+

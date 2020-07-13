@@ -1,0 +1,97 @@
+version: "3"
+services:
+  pg_master:
+    build: ./master
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=hamed
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=hamed
+      - PG_REP_USER=rep
+      - PG_REP_PASSWORD=123456
+    networks:
+      default:
+        aliases:
+          - pg_cluster
+    ports:
+      - 5442:5432 
+  pg_slave:
+    build: ./slave
+    environment:
+      - POSTGRES_USER=hamed
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=hamed
+      - PG_REP_USER=rep
+      - PG_REP_PASSWORD=123456
+      - PG_MASTER_HOST=pg_master
+    networks:
+      default:
+        aliases:
+          - pg_cluster
+    ports:
+      - 5443:5432 
+  pgbouncer-pg_master:
+    image: brainsam/pgbouncer:1.12.0
+    environment:
+      DB_HOST: pg_master
+      DB_USER: hamed           # define credentials
+      DB_PASSWORD: 123456       # define credentials
+      DB_port: 5432
+      POOL_MODE: transaction
+      DEFAULT_POOL_SIZE: 56
+      MAX_CLIENT_CONN: 10000
+    # volumes:
+    #   - ./pgbouncer:/etc/pgbouncer
+    links:
+      - pg_master:pg_master
+    ports:
+      - 6432:6432   
+    networks:
+      default:
+        aliases:
+          - pg_cluster
+  pgbouncer-pg_slave:
+    image: brainsam/pgbouncer:1.12.0
+    environment:
+      DB_HOST: pg_slave
+      DB_USER: hamed           # define credentials
+      DB_PASSWORD: 123456       # define credentials
+      DB_port: 5432
+      POOL_MODE: transaction
+      DEFAULT_POOL_SIZE: 56
+      MAX_CLIENT_CONN: 10000
+    # volumes:
+    #   - ./pgbouncer:/etc/pgbouncer
+    links:
+      - pg_slave:pg_slave
+    ports:
+      - 6434:6432   
+    networks:
+      default:
+        aliases:
+          - pg_cluster
+ 
+  auth:
+    restart: always
+    build:
+        context: .
+        dockerfile: auth/Dockerfile
+    image: leo/auth:0.1.0
+    ports:
+        - 5000:5000
+    networks:
+      default:
+        aliases:
+          - pg_cluster
+    volumes:
+        - ./auth:/build
+        - ./common:/build/common
+    env_file: env/development.env        
+    logging:
+        driver: "json-file"
+        options:
+            max-size: "100M"
+            max-file: "3"
+volumes:
+  pg_data:

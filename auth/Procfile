@@ -1,0 +1,5 @@
+api: gunicorn wsgi:app --reload --threads 10 --workers=4 -b :5000
+
+# TODO: uncommend worker celery
+#worker: celery worker -A app.main.worker.celery_app --loglevel=info
+
