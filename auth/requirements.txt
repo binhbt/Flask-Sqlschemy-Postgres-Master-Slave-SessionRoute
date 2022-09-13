@@ -13,7 +13,7 @@ honcho==1.0.1
 
 # monitor
 slacker-log-handler==1.7.1
-flower==0.9.3
+flower==1.2.0
 
 # TODO: separate this file for multiple environment
 # dev
